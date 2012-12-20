@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+        <title>Schnøgify me!</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+        <link rel="stylesheet" href="schnoge.css" type="text/css" media="screen" />
+        <script type="text/javascript" src="lib/haar-detector.js"></script>
+        <script type="text/javascript" src="lib/haarcascade_frontalface_alt.js"></script>
+        <script type="text/javascript" src="lib/jquery-1.8.3.min.js"></script>
+        <script type="text/javascript" src="lib/jquery.filedrop.js"></script>
+    </head>
+
+    <body>
+        <h1>Schnøgify me!</h1>
+
+        <div class="progress" >
+            <img src='ajax-loader.gif' style="display:none"/>
+        </div>
+        <!-- Placeholder for the Schnogel face. Used in scripts. -->
+        <img id="schnoge_face" src='schnoegell_base.png' style="display: none;"/>
+
+        <!-- Used for handling the centering of download section -->
+        <div class="outer">
+            <!-- Area where you can drop images -->
+            <div id="dropbox">
+                <div class="message">(Drag & drop images here to upload.)</div>
+                <div id="container">
+                    <!-- The main canvas -->
+                    <canvas id="image"></canvas>
+                </div>
+            </div>
+            <div class="buttonHolder">
+                <a id="downloadButton">Download  the Image</a>
+            </div>
+        </div>
+        <!-- The main functionality in one snappy js-file -->
+        <script src="script.js"></script>
+    </body>
+</html>

@@ -1,0 +1,63 @@
+body {
+    color: #fff;
+    font-size: 16px;
+    font-family: monospace;
+    background-color: #222222;
+}
+h1 {
+    text-align: center;
+    margin-bottom: 5px;
+}
+.outer {
+    position: relative;
+    width: 800px;
+    height: 600px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+}
+.message {
+    position: absolute;
+    text-align: center;
+    top: 25px;
+    left: 0;
+    right: 0;
+}
+#dropbox {
+    position: relative;
+    background-color: black;
+    width: 800px;
+    height: 600px;
+    border: 1px dashed #d3d3d3;
+    margin-left: auto;
+    margin-right: auto;
+    /* This is used to vertically align the inside container */
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+}
+#container {
+    /* This is used for vertically aligning the canvas */
+    display: inline-block;
+    box-sizing: border-box;
+    position: relative;
+}
+.buttonHolder {
+    width: 100%;
+    padding-top: 30px;
+    padding-bottom: 40px;
+}
+#downloadButton {
+    text-decoration: none;
+    position: relative;
+    border: 1px solid white;
+    border-radius: 5px;
+    padding: 5px;
+    color: white;
+    cursor: pointer;
+}
+.progress {
+    height: 20px;
+    text-align: center;
+}
