@@ -5,6 +5,10 @@ Schnøgify.me is a simple tool that allows images to be schnøgified. In other w
 
 Face-recognition is done by using https://github.com/foo123/HAAR.js plugin. Drag & Drop box is done with https://github.com/weixiyen/jquery-filedrop
 
+Currently you can access running service here: http://schnogify.me
+
+You can now also provide an url with the url: http://schnofigy.me/?url=<path_to_your_picture>
+
 Requirements & Usage
 =========
 
