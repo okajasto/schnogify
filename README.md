@@ -7,7 +7,7 @@ Face-recognition is done by using https://github.com/foo123/HAAR.js plugin. Drag
 
 Currently you can access running service here: http://schnogify.me
 
-You can now also provide an url with the url: http://schnofigy.me/?url=<path_to_your_picture>
+You can now also provide an url with the url: http://schnofigy.me/?url=[path_to_your_picture]
 
 Requirements & Usage
 =========
