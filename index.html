@@ -1,55 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-        <title>Schnøgify me!</title>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
-        <link rel="stylesheet" href="css/schnoge.css" type="text/css" media="screen" />
-        <link rel="stylesheet" href="css/font-awesome.css" type="text/css" media="screen" />
-        <script type="text/javascript" src="lib/haar-detector.js"></script>
-        <script type="text/javascript" src="lib/haarcascade_frontalface_alt.js"></script>
-        <script type="text/javascript" src="lib/haarcascade_frontalface_alt2.js"></script>
-        <script type="text/javascript" src="lib/haarcascade_frontalface_default.js"></script>
-        <script type="text/javascript" src="lib/jquery-1.8.3.min.js"></script>
-        <script type="text/javascript" src="lib/jquery.filedrop.js"></script>
-    </head>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>Schnøgify me!</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <link rel="stylesheet" href="css/schnoge.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="css/font-awesome.css" type="text/css" media="screen" />
+    <script type="text/javascript" src="lib/haar-detector.js"></script>
+    <script type="text/javascript" src="lib/haarcascade_frontalface_alt.js"></script>
+    <script type="text/javascript" src="lib/haarcascade_frontalface_alt2.js"></script>
+    <!--        <script type="text/javascript" src="lib/haarcascade_frontalface_default.js"></script>
+            <script type="text/javascript" src="lib/haarcascade_frontalface_alt_tree.js"></script>
+            <script type="text/javascript" src="lib/haarcascade_profileface.js"></script>
+            <script type="text/javascript" src="lib/haarcascade_mcs_eyepair_small.js"></script>
+            <script type="text/javascript" src="lib/haarcascade_mcs_eyepair_big.js"></script> -->
+    <script type="text/javascript" src="lib/jquery-1.8.3.min.js"></script>
+    <script type="text/javascript" src="lib/jquery.filedrop.js"></script>
+</head>
 
-    <body>
-        <header style="display: none">
-            <a id="settingsButton"><i  class="icon-cog"></i></a>
-            <div id="settings" style="display: none;">
-                <label for="detectScale">Scale</label><input id="detectScale" >
-                <label for="detectScaleInc">ScaleInc</label><input id="detectScaleInc">
-                <label for="detectIncrement">Increment</label><input id="detectIncrement" value="1">
-                <label for="detectMinNeighbours">MinNeighbours</label><input id="detectMinNeighbours" value="1">
-                <label for="detectCannyPruning">doCannyPruning</label><input id="detectCannyPruning" value="1">
-            </div>
-        </header>
-        <h1>Schnøgify me!</h1>
+<body>
 
-        <div class="progress" >
-            <img src='ajax-loader.gif' style="display:none"/>
-        </div>
-        <!-- Placeholder for the Schnogel face. Used in scripts. -->
-        <img id="schnoge_face" src='schnoegell_base.png' style="display: none;"/>
+<header>
+    <a id="settingsButton" style="display: none;"><i  class="icon-cog"></i></a>
+    <div id="settings" style="display: none;">
+        <label for="detectScale">Scale</label><input id="detectScale" >
+        <label for="detectScaleInc">ScaleInc</label><input id="detectScaleInc">
+        <label for="detectIncrement">Increment</label><input id="detectIncrement">
+        <label for="detectMinNeighbours">MinNeighbours</label><input id="detectMinNeighbours">
+        <label for="detectCannyPruning">doCannyPruning</label><input id="detectCannyPruning">
 
-        <!-- Used for handling the centering of download section -->
-        <div class="outer">
-            <!-- Area where you can drop images -->
-            <div id="dropbox">
-                <div class="message">(Drag & drop images here to upload.)</div>
-                <div id="container">
-                    <!-- The main canvas -->
-                    <canvas id="image"></canvas>
-                </div>
-            </div>
+        <select id="selectCascade">
+
+        </select>
+
+        <a id="reloadButton"><i class="icon-cogs"></i></a>
+    </div>
+</header>
+<h1>Schnøgify me!</h1>
+
+<div class="progress" >
+    <img src='ajax-loader.gif' style="display:none"/>
+</div>
+
+<!-- Placeholder for uploaded image. -->
+
+<!-- Placeholder for the Schnogel face. Used in scripts. -->
+<img id="schnoge_face" src='schnoegell_base.png' style="display: none;"/>
+
+<!-- Used for handling the centering of download section -->
+<div class="outer">
+    <!-- Area where you can drop images -->
+    <div id="dropbox">
+        <div class="message">(Drag & drop images here to upload.)</div>
+        <div id="container">
+            <!-- The main canvas -->
+            <canvas id="image"></canvas>
         </div>
-        <div class="buttonHolder">
-            <a id="downloadButton">Download  the Image</a>
-        </div>
-        <footer>Created by <a href="https://twitter.com/okajasto">okajasto</a>, hosted by <a href="https://twitter.com/ykarikos">ykarikos</a>, code in <a href="https://github.com/okajasto/schnogify">Github</a></footer>
-        <!-- The main functionality in one snappy js-file -->
-        <script src="script.js"></script>
-    </body>
+    </div>
+</div>
+<div class="buttonHolder">
+    <a id="downloadButton">Download  the Image</a>
+</div>
+<footer>Created by <a href="https://twitter.com/okajasto">okajasto</a>, hosted by <a href="https://twitter.com/ykarikos">ykarikos</a>, code in <a href="https://github.com/okajasto/schnogify">Github</a></footer>
+<!-- The main functionality in one snappy js-file -->
+<script src="script.js"></script>
+</body>
 </html>
