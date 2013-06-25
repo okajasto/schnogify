@@ -43,7 +43,7 @@ $(function(){
     function init(url) {
         if (url) {
             wait.show();
-            var target = "/get?url=" + url;
+            var target = "/get.php?url=" + url;
             console.log("URL: " + target);
             image.src = target;
         }
